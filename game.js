@@ -14,6 +14,18 @@ $("body").keypress(function(){
     }
 })
 
+if($(window).width()<=670){
+    $("#level-title").text("Tap anywhere to start");
+    $("body").on('tap',function(){
+        if(!gameStart)
+        {
+            $("#level-title").text("Level " + countLevel);
+            started=true;
+            nextSequence();
+        }
+    })
+}
+
 function nextSequence(){
     userClickedPattern = [];
     ++countLevel;
