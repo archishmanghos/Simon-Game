@@ -5,18 +5,20 @@ var buttonColours=["red","blue","green","yellow"];
 var countLevel=0;
 var gameStart=false;
 
-$("body").keypress(function(){
-    if(!gameStart)
-    {
-        $("#level-title").text("Level " + countLevel);
-        started=true;
-        nextSequence();
-    }
-})
-
-if($(window).width()<=800){
+if($(window).width()<=670){
     $("#level-title").text("Tap anywhere to start");
-    $("body").on('tap',function(){
+    $("body").on("tap",function(){
+        if(!gameStart)
+        {
+            $("#level-title").text("Level " + countLevel);
+            started=true;
+            nextSequence();
+        }
+    })
+}
+else
+{
+    $("body").keypress(function(){
         if(!gameStart)
         {
             $("#level-title").text("Level " + countLevel);
