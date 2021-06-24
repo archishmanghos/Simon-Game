@@ -14,7 +14,7 @@ $("body").keypress(function(){
     }
 })
 
-if($(window).width()<=670){
+if($(window).width()<=800){
     $("#level-title").text("Tap anywhere to start");
     $("body").on('tap',function(){
         if(!gameStart)
