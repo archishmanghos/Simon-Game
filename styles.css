@@ -14,10 +14,14 @@ body {
   display: block;
   width: 50%;
   margin: auto;
-
+  padding-left: 6.25rem;
 }
 
-.btn {
+.btn{
+  margin-left: 1.875rem;
+}
+
+.btn1 {
   margin: 25px;
   display: inline-block;
   height: 200px;
@@ -54,9 +58,12 @@ body {
 
 
 @media (max-width: 670px) {
-  .btn{
+  .btn1{
     height: 100px;
     width: 100px;
+  }
+  .container{
+    padding-left: 60px;
   }
   #level-title{
     font-size: 1rem;
